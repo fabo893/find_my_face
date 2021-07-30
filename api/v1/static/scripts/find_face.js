@@ -33,10 +33,15 @@ $('#btn').on('click', function () {
 */
 
 $('#btn').on('click', function () {
+    const img1 = document.querySelector(".preview_image_one");
+    const img2 = document.querySelector(".preview_image_two");
 
     $.ajax({
         type: 'POST',
-        url: '/save',
-        success: success
+        url: '/find',
+        data: { param: img1, param2: img2 },
+        success: function () {
+            console.log("Good")
+        }
     });
 });

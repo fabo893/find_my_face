@@ -2,9 +2,10 @@
 """
 Api for Find My Face
 """
+
 import models
 from models.known import Known
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 
 
 app = Flask(__name__)
@@ -13,11 +14,9 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/save", methods=["POST"])
+@app.route("/find", methods=["POST"])
 def save():
-    img1 = request.form.get("img_uploads1")
-    Known(img1)
-    return "Yes"
+    return {{ url_for('identify.py, img1, img2') }}
 
 
 if __name__ == "__main__":

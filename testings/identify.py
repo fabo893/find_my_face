@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 import face_recognition
+import sys
 from PIL import Image, ImageDraw
 
-known_face = face_recognition.load_image_file('./static/images/known/obama.jpg')
+
+known_face = face_recognition.load_image_file(sys.argv[1])
 known_face_encoding = face_recognition.face_encodings(known_face)[0]
 
 #  Create arrays of encodings and names
@@ -15,7 +17,7 @@ known_face_names = [
 ]
 
 # Load test image to find faces in
-test_image = face_recognition.load_image_file('./static/images/unknown/obama4.jpg')
+test_image = face_recognition.load_image_file(sys.argv[2])
 
 # Find faces in test image
 face_locations = face_recognition.face_locations(test_image)
@@ -52,4 +54,4 @@ del draw
 pil_image.show()
 
 # Save image
-pil_image.save('obama.jpg')
+pil_image.save(sys.argv[1])
