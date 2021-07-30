@@ -1,1 +1,1 @@
-# findMyFace
+# Facial recongition project
