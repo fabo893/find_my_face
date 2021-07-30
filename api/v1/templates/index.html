@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="static/images/favicon/find_my_face_favicon.ico"/>
+        <link rel="stylesheet" href="static/styles/markup.css"/>
+        <link rel="stylesheet" href="static/styles/picture.css"/>
+        <title>Find my face</title>
+    </head>
+
+    <body>
+        <div class="container">
+          <nav id="nav_one">
+            <div id="nav_list">
+              <ul>
+                <li><a href="#abt_div">About</a></li>
+                <li><a href="#img_div">How to</a></li>
+                <li><a href="#team_info">Team</a></li>
+              </ul>
+            </div>
+          </nav>
+
+            <div id="header_logo">
+                <img src="images/web_pictures/Find_My_Face_logo.png" alt="Find My Face Logo" id="pic_logo">
+            </div>
+
+            <div id="abt_div">
+              <h1>About</h1>
+            </div>
+
+            <div class="btn-search" id="img_div">
+                <button>Find</button>
+            </div>
+
+            <div class="img_div">
+                <div class="img-container">
+                    <div class="img-preview" id="img_one_preview">
+                        <img src="" alt="Image Preview" class="preview_image_one"/>
+                        <span class="preview_text_one">Image Preview</span>
+                    </div>
+
+                    <form method="POST" enctype="multipart/form-data">
+                        <div class="files">
+                          <label for="img_one">
+                            Choose image to upload (PNG or JPG)
+                          </label>
+              
+                          <input
+                            type="file"
+                            id="img_one"
+                            accept=".jpg, .png"
+                            name="image_uploads"
+                          />
+                        </div>
+                        <!--
+                        <div class="preview">
+                          <p>No files currently selected for upload</p>
+                        </div>
+                      -->
+                    </form>
+                </div>
+
+                <div class="img-container">
+                    <div class="img-preview" id="img_two_preview">
+                        <img src="" alt="Image Preview" class="preview_image_two"/>
+                        <span class="preview_text_two">Image Preview</span>
+                    </div>
+
+                    <form method="POST" enctype="multipart/form-data">
+                        <div class="files">
+                          <label for="img_two">
+                            Choose image to upload (PNG or JPG)
+                          </label>
+              
+                          <input
+                            type="file"
+                            id="img_two"
+                            accept=".jpg, .png"
+                            name="image_uploads"
+                          />
+                        </div>
+                        <!--
+                        <div class="preview2">
+                          <p>No files currently selected for upload</p>
+                        </div>
+                      -->
+                    </form>
+                </div>
+            </div>
+
+            <div id="team_info">
+              <div class="team_div">
+                <img src="images/authors/Jose_Fabian.jpg" alt="" class="team_pic">
+                <h2>Jose Fabian Rosa</h2>
+              </div>
+
+              <div class="team_div">
+                <img src="images/authors/Jeff_Martinez.jpeg" alt="" class="team_pic">
+                <h2>Jeff Martinez</h2>
+              </div>
+
+              <div class="team_div">
+                <img src="images/authors/Jared_Beguellin.jpg" alt="" class="team_pic">
+                <h2>Jared Beguellin</h2>
+              </div>
+            </div>
+
+            <div id="footer">
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="static/scriptsfile_selection.js"></script>
+        <script type="text/javascript" src="static/scripts/image_preview.js"></script>
+    </body>
+</html>
