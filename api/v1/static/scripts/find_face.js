@@ -1,5 +1,5 @@
 #!/usr/bin/nodejs
 
-$("IMG.preview_img_one").click(function() {
-    $(this).css('width', '50%');
+$("#btn").click(function() {
+    $(".preview_image_one").css('width', '50%');
 });
