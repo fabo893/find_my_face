@@ -3,6 +3,7 @@
 Api for Find My Face
 """
 
+from werkzeug.utils import redirect
 from models.known import Known
 from flask import Flask, render_template, request, url_for, request
 
@@ -17,6 +18,7 @@ def home():
 def upload_one():
     img1 = request.form.get('image_uploads1')
     Known(img1, name="first_img")
+    return redirect("/")
     
 
 
