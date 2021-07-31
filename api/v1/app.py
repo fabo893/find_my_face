@@ -17,7 +17,8 @@ def home():
 @app.route("/upload1", methods=["POST"])
 def upload_one():
     img1 = request.form.get('image_uploads1')
-    Known(img1, name="first_img")
+    img_one = Known(img1, name="first_img")
+    img_one.save()
     return redirect("/")
     
 
