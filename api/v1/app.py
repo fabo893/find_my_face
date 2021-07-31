@@ -3,8 +3,6 @@
 Api for Find My Face
 """
 
-from werkzeug.utils import redirect
-from models import storage
 from models.known import Known
 from flask import Flask, render_template, request, url_for, request
 
