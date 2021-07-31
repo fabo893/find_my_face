@@ -29,10 +29,12 @@
               <h1>About</h1>
             </div>
 
-            <div class="btn-search" id="img_div">
-                <button id="btn">Find</button>
-            </div>
-
+            <form action={{ url_for('upload') }} method="POST">
+              <div class="btn-search" id="img_div">
+                  <button type="submit" name="Find" id="btn">Find</button>
+              </div>
+            </form>
+            
             <div class="img_div">
                 <div class="img-container">
                     <div class="img-preview" id="img_one_preview">
@@ -40,7 +42,7 @@
                         <span class="preview_text_one">Image Preview</span>
                     </div>
 
-                    <form action={{ url_for('upload_one') }} method="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data">
                         <div class="files">
                           <label for="img_one">
                             Choose image to upload (PNG or JPG)
@@ -52,8 +54,6 @@
                             accept=".jpg, .png"
                             name="image_uploads1"
                           />
-
-                          <input type="submit" name="submit"/>
                         </div>
                         <!--
                         <div class="preview">

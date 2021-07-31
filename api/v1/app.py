@@ -3,8 +3,10 @@
 Api for Find My Face
 """
 
+from os import name
 from werkzeug.utils import redirect
 from models.known import Known
+from models.unknown import Unknown
 from flask import Flask, render_template, request, url_for, request
 
 
@@ -14,11 +16,15 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/upload1", methods=["POST"])
-def upload_one():
+@app.route("/upload", methods=["POST"])
+def upload():
     img1 = request.form.get('image_uploads1')
-    img_one = Known(img1, name="first_img")
+    img_one = Known(img1, name="known_img")
     img_one.save()
+
+    img2 = request.form.get('image_uploads2')
+    img_two = Unknown(img2, name="unknown_img")
+    img_two.save()
     return redirect("/")
     
 
