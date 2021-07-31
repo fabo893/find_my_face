@@ -40,7 +40,7 @@
                         <span class="preview_text_one">Image Preview</span>
                     </div>
 
-                    <form method="POST" enctype="multipart/form-data">
+                    <form action={{ url_for('upload_one') }} method="POST" enctype="multipart/form-data">
                         <div class="files">
                           <label for="img_one">
                             Choose image to upload (PNG or JPG)
