@@ -17,9 +17,9 @@ def home():
 
 @app.route("/upload1", methods=["POST"])
 def upload_one():
-    img_one = request.form.get('image_uploads1')
-    storage.new(img_one)
-    storage.save()
+    img1 = request.form.get('image_uploads1')
+    Known(img1)
+    
 
 
 if __name__ == "__main__":
