@@ -1,4 +1,5 @@
+#!/usr/bin/nodejs
 
-("#btn").click(function () {
+$("#btn").click(function () {
     console.log("Working!!!");
 });
