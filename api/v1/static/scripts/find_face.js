@@ -1,5 +1,7 @@
 #!/usr/bin/nodejs
 
 $("#btn").click(function () {
-    console.log("Working!!!");
+    let img1 = $(".preview_image_one").attr("src");
+
+    console.log(img1);
 });
