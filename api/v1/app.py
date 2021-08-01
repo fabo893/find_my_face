@@ -29,9 +29,9 @@ def upload():
     with open(img2, 'rb') as f2:
         binary2 = f2.read()
 
-    img_two = Unknown(img2, name="unknown_img", image=binary)
+    img_two = Unknown(img2, name="unknown_img", image=binary2)
     img_two.save()
-    
+
     return redirect("/")
     
 
