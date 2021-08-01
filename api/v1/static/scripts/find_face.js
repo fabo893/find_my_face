@@ -10,7 +10,7 @@ $("#btn").click(function() {
         $.ajax({
             type: "POST",
             url: "/upload",
-            data: { param: input },
+            data: [img_one, img_two],
             success: function (response) {
                 console.log(response);
             }

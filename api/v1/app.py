@@ -19,12 +19,19 @@ def home():
 @app.route("/upload", methods=["POST"])
 def upload():
     img1 = request.form.get('image_uploads1')
-    img_one = Known(img1, name="known_img")
+    with open(img1, 'rb') as f:
+        binary = f.read()
+
+    img_one = Known(img1, name="known_img", image=binary)
     img_one.save()
 
     img2 = request.form.get('image_uploads2')
-    img_two = Unknown(img2, name="unknown_img")
+    with open(img2, 'rb') as f2:
+        binary2 = f2.read()
+
+    img_two = Unknown(img2, name="unknown_img", image=binary)
     img_two.save()
+    
     return redirect("/")
     
 
