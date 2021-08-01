@@ -1,19 +1,12 @@
 #!/usr/bin/nodejs
 
 $("#btn").click(function() {
-    img_one = document.getElementById("img_one");
-    img_two = document.getElementById("img_two");
+    img_one = document.getElementsByClassName("preview_image_one");
+    img_two = document.getElementsByClassName("preview_image_two");
 
-    if (img_one === null || img_two === null) {
-        alert('Please upload the two images');
-    } else {
-        $.ajax({
-            type: "POST",
-            url: "/upload",
-            data: [img_one, img_two],
-            success: function (response) {
-                console.log(response);
-            }
-        });
-    }
+    src1 = img_one.getAttribute("src");
+    src2 = img_two.getAttribute("src");
+
+    console.log(src1);
+    console.log(src2);
 });
