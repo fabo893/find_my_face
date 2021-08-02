@@ -16,7 +16,7 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route('/display/<dic>')
+@app.route("/display/<dic>")
 def display(dic):
     return render_template("test.html", dic=dic)
 
