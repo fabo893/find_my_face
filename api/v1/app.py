@@ -17,18 +17,16 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/upload", methods=['GET', 'POST'])
+@app.route("/upload", methods=['POST'])
 def upload():
-    if request.method == 'POST':
-        test1 = request.get_json()
-        json_parse = json.dumps(test1)
-        return redirect(url_for('display', dic = json_parse))
+    test1 = request.get_json()
+    json_parse = json.dumps(test1)
+    return redirect(url_for('display', dic = json_parse))
 
 @app.route('/display/<dic>')
 def display(dic):
     return render_template('test.htlm', dic=dic)
     
-
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)
