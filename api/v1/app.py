@@ -21,6 +21,7 @@ def home():
 def upload():
     test1 = request.get_json()
     json_parse = json.loads(test1)
+    print(json_parse)
     return render_template('test.html', test=json_parse)
     
 

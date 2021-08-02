@@ -7,6 +7,8 @@ $("#btn").click(function () {
 
     json_par = JSON.stringify(json_img);
 
+    console.log(json_par);
+
     $.ajax({
         type: 'POST',
         url: '/upload',
