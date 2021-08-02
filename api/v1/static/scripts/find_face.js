@@ -5,12 +5,12 @@ $("#btn").click(function () {
 
     json_img = {'name': 'testing1', 'image': img1};
 
-    JSON.stringify(json_img);
+    json_par = JSON.stringify(json_img);
 
     $.ajax({
         type: 'POST',
         url: '/upload',
-        data: json_img,
+        data: json_par,
         contentType: 'application/json',
         success: function(response) {
             console.log(response);

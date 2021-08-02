@@ -17,7 +17,7 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/upload")
+@app.route("/upload", methods=['POST'])
 def upload():
     test1 = request.get_json()
     json_parse = json.loads(test1)
