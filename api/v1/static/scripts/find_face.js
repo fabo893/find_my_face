@@ -3,5 +3,17 @@
 $("#btn").click(function () {
     let img1 = $(".preview_image_one").attr("src");
 
-    console.log(img1);
+    json_img = {'name': 'testing1', 'image': img1};
+
+    JSON.stringify(json_img);
+
+    $.ajax({
+        type: 'POST',
+        url: '/upload',
+        data: json_img,
+        contentType: 'application/json',
+        success: function(response) {
+            console.log(response);
+        }
+    });
 });

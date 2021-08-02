@@ -4,6 +4,7 @@ Api for Find My Face
 """
 
 from os import name
+import json
 from werkzeug.utils import redirect
 from models.known import Known
 from models.unknown import Unknown
@@ -18,21 +19,9 @@ def home():
 
 @app.route("/upload", methods=["POST"])
 def upload():
-    img1 = request.form.get('image_uploads1')
-    with open(img1, 'rb') as f:
-        binary = f.read()
-
-    img_one = Known(img1, name="known_img", image=binary)
-    img_one.save()
-
-    img2 = request.form.get('image_uploads2')
-    with open(img2, 'rb') as f2:
-        binary2 = f2.read()
-
-    img_two = Unknown(img2, name="unknown_img", image=binary2)
-    img_two.save()
-
-    return redirect("/")
+    test1 = request.get_json()
+    json_parse = json.loads(test1)
+    return render_template('test.html', test=json_parse)
     
 
 
