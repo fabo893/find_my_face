@@ -24,6 +24,7 @@ def display(dic):
 def upload():
     test1 = request.get_json()
     json_parse = json.dumps(test1)
+    print(type(json_parse))
     return redirect(url_for('display', dic='hola'))
 
 if __name__ == "__main__":
