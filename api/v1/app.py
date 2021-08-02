@@ -22,7 +22,7 @@ def upload():
     test1 = request.get_json()
     json_parse = json.dumps(test1)
     print(json_parse)
-    return render_template('test.html', test=json_parse)
+    return redirect('test.html', test=json_parse)
     
 
 
