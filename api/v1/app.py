@@ -25,7 +25,7 @@ def upload():
     test1 = request.get_json()
     json_parse = json.dumps(test1)
     print(type(json_parse))
-    render_template('test.html', dic='hola')
+    redirect('test.html', dic='hola')
     return jsonify({'status': 'ok'}), 200
 
 if __name__ == "__main__":
