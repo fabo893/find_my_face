@@ -7,7 +7,7 @@ from os import name
 import json
 from models.known import Known
 from models.unknown import Unknown
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, jsonify
 
 
 app = Flask(__name__)
@@ -25,7 +25,8 @@ def upload():
     test1 = request.get_json()
     json_parse = json.dumps(test1)
     print(type(json_parse))
-    return redirect(url_for('display', dic='hola'))
+    render_template('test.html', dic='hola')
+    return jsonify({'status': 'ok'}), 200
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)
