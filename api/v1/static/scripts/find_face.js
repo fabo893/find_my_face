@@ -11,6 +11,7 @@ $("#btn").click(function () {
         type: 'POST',
         url: '/upload',
         data: json_par,
+        contentType: 'application/json',
         success: function(response) {
             console.log(response);
         }
