@@ -29,14 +29,9 @@ def upload():
     print(type(json_parse))
     print('-------------------------')
     print(type(test1))
-    print('----------------')
-    print(test1['name'])
-    print('--------------------------')
-    print(test1['image'])
 
-    Known(name=test1['name'], image=test1['image'])
-    storage.save()
-
+    photo1 = Known(name=test1['name'], image=test1['image'])
+    photo1.save()
 
     return jsonify({'status': 'ok'}), 200
 
