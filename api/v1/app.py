@@ -17,7 +17,7 @@ def home():
     return render_template("index.html")
 
 @app.route("/display/<dic>")
-def display(dic="Testing"):
+def display(dic):
     return render_template("test.html", dic=dic)
 
 @app.route("/upload", methods=['POST'])

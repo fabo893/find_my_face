@@ -10,7 +10,7 @@ $("#btn").click(function () {
     console.log(json_par);
 
     $.ajax({
-        url: "/display",
+        url: "/display/Testing",
         success: function() {
             console.log("Good News!!")
         }
