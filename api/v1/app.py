@@ -24,7 +24,7 @@ def display(dic):
 def upload():
     test1 = request.get_json()
 
-    print(test1)
+    print(type(test1))
 
     with open(test1.image, 'rb') as file1:
         binary1 = file1.read()
