@@ -30,7 +30,7 @@ def upload():
     print('-------------------------')
     print(type(test1))
 
-    Known(name=test1['name'], image=binary1)
+    Known(name=test1['name'], image=test1['image'])
     storage.save()
 
 
