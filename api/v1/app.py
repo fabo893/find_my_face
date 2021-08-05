@@ -23,12 +23,11 @@ def display(dic):
 @app.route("/upload", methods=['POST'])
 def upload():
     test1 = request.get_json()
-    json_parse = json.dumps(test1)
 
-    with open(json_parse[1], 'rb') as file1:
+    with open(test1['image'], 'rb') as file1:
         binary1 = file1.read()
 
-    Known(name=json_parse['name'], image=binary1)
+    Known(name=test1['name'], image=binary1)
 
     return jsonify({'status': 'ok'}), 200
 
