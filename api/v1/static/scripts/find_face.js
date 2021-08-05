@@ -10,7 +10,9 @@ $("#btn").click(function () {
     console.log(json_par);
 
     $.ajax({
-        url: '/display/' + json_img,
-        success: 'success'
+        url: "/display",
+        success: function() {
+            console.log("Good News!!")
+        }
     });
 });
