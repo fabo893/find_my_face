@@ -5,6 +5,7 @@ Api for Find My Face
 
 from os import name
 import json
+from models import storage
 from models.known import Known
 from models.unknown import Unknown
 from flask import Flask, render_template, redirect, request, url_for, jsonify
@@ -33,6 +34,8 @@ def upload():
         binary1 = file1.read()
 
     Known(name=test1['name'], image=binary1)
+    storage.save()
+
 
     return jsonify({'status': 'ok'}), 200
 
