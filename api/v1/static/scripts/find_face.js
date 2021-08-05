@@ -10,12 +10,7 @@ $("#btn").click(function () {
     console.log(json_par);
 
     $.ajax({
-        type: 'POST',
-        url: '/upload',
-        data: json_par,
-        contentType: 'application/json',
-        success: function(response) {
-            console.log(response);
-        }
+        url: '/display/' + json_img,
+        success: 'success'
     });
 });
