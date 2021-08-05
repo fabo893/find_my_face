@@ -29,6 +29,8 @@ def upload():
     print(type(json_parse))
     print('-------------------------')
     print(type(test1))
+    print('----------------')
+    print(test1['name'])
 
     Known(name=test1['name'], image=test1['image'])
     storage.save()
