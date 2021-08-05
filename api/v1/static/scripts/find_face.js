@@ -11,8 +11,8 @@ $("#btn").click(function () {
 
     $.ajax({
         url: "/display/Testing",
-        success: function() {
-            console.log("Good News!!")
+        success: function(response) {
+            console.log(response)
         }
     });
 });
