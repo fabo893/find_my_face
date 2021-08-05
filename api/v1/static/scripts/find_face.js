@@ -16,6 +16,12 @@ $("#btn").click(function () {
         contentType: 'application/json',
         success: function(response) {
             console.log(response);
+
+            $.ajax({
+                type: 'GET',
+                url: '/display/' + img1,
+                success: 'success'
+            });
         }
     });
 });
