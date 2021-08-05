@@ -30,7 +30,10 @@ def upload():
     print('-------------------------')
     print(type(test1))
 
-    photo1 = Known(name=test1['name'], image=test1['image'])
+    with open(test1['image'], 'rb') as file:
+        binary = file.read()
+
+    photo1 = Known(name=test1['name'], image=binary)
     photo1.save()
 
     return jsonify({'status': 'ok'}), 200
