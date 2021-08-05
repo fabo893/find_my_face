@@ -29,7 +29,7 @@ def upload():
     print('-------------------------')
     print(type(test1))
 
-    with open(test1, 'rb') as file1:
+    with open(test1['image'], 'rb') as file1:
         binary1 = file1.read()
 
     Known(name=test1['name'], image=binary1)
