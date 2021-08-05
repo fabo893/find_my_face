@@ -12,8 +12,8 @@ $("#btn").click(function () {
         url: '/upload',
         data: json_par,
         contentType: 'application/json',
-        success: function(response) {
-            console.log(response);
+        success: function() {
+            console.log("Good");
         }
     });
 });
