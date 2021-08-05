@@ -9,10 +9,4 @@ $("#btn").click(function () {
 
     console.log(json_par);
 
-    $.ajax({
-        url: "/display/Testing",
-        success: function(response) {
-            console.log(response)
-        }
-    });
 });
