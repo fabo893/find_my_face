@@ -23,7 +23,11 @@ def display(dic):
 @app.route("/upload", methods=['POST'])
 def upload():
     test1 = request.get_json()
+    json_parse = json.dumps(test1)
 
+    print(type(json_parse))
+    print('-------------------------')
+    print(json_parse)
     print(type(test1))
 
     with open(test1.image, 'rb') as file1:
