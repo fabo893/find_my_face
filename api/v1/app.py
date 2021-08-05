@@ -25,11 +25,11 @@ def upload():
     test1 = request.get_json()
     json_parse = json.dumps(test1)
 
-    with open(json_parse['image'], 'rb') as file1:
+    with open(json_parse[1], 'rb') as file1:
         binary1 = file1.read()
 
     Known(name=json_parse['name'], image=binary1)
-    
+
     return jsonify({'status': 'ok'}), 200
 
 if __name__ == "__main__":
