@@ -7,8 +7,6 @@ $("#btn").click(function () {
 
     json_par = JSON.stringify(json_img);
 
-    console.log(json_img);
-    console.log('---------------------------------------------');
-    console.log(json_par);
+    console.log(JSON.parse(json_par));
 
 });
