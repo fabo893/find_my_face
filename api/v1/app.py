@@ -31,6 +31,8 @@ def upload():
     print(type(test1))
     print('----------------')
     print(test1['name'])
+    print('--------------------------')
+    print(test1['image'])
 
     Known(name=test1['name'], image=test1['image'])
     storage.save()
