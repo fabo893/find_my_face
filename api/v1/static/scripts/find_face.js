@@ -6,7 +6,7 @@ $("#btn").click(function () {
 
     $.ajax({
         type: 'POST',
-        url: '~/printMatch.py' + img1 + img2,
+        url: '~/testing/printMatch.py' + img1 + img2,
         success: function (response) {
             console.log(response);
         }
