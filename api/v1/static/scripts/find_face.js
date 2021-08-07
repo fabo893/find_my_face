@@ -3,7 +3,5 @@
 $("#btn").click(function () {
     let img1 = $(".preview_image_one").attr("src");
 
-    $('#upload').append('<img id="subir">');
-
-    $('#subir').attr('src=' + img1);
+    $('#upload').append('<img id="subir" src=' + img1 + '>');
 });
