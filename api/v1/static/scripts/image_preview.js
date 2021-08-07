@@ -7,7 +7,7 @@ const previewText = previewContainer.querySelector(".preview_text_one");
 
 files.addEventListener("change", function () {
   const file = this.files[0];
-  console.log(file.name);
+  console.log(typeof(file.name));
 
   if (file) {
     const reader = new FileReader();
