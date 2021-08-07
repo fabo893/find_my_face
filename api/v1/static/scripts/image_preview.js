@@ -7,6 +7,8 @@ const previewText = previewContainer.querySelector(".preview_text_one");
 
 files.addEventListener("change", function () {
   const file = this.files[0];
+  console.log(file);
+  
   if (file) {
     const reader = new FileReader();
     previewText.style.display = "none";
