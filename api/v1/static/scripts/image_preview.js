@@ -8,16 +8,17 @@ const previewText = previewContainer.querySelector(".preview_text_one");
 files.addEventListener("change", function () {
   const file = this.files[0];
   console.log(file);
-  
+
   if (file) {
     const reader = new FileReader();
     previewText.style.display = "none";
     previewImage.style.display = "block";
     reader.addEventListener("load", function () {
-      console.log(this.result);
+      //console.log(this.result);
       previewImage.setAttribute("src", this.result);
     });
-    reader.readAsDataURL(file);
+    const test = reader.readAsDataURL(file);
+    console.log(test);
   } else {
     previewText.style.display = null;
     previewImage.style.display = null;
