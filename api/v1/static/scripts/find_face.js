@@ -2,6 +2,13 @@
 
 $("#btn").click(function () {
     let img1 = $(".preview_image_one").attr("src");
+    let img2 = $('.preview_image_two').attr('src');
 
-    $('#upload').append('<img id="subir" src=' + img1 + '>');
+    $.ajax({
+        type: 'POST',
+        url: '~/printMatch.py' + img1 + img2,
+        success: function (response) {
+            console.log(response);
+        }
+    });
 });
