@@ -9,6 +9,7 @@ function updateImageDisplay() {
   }
 
   const file = input.files[0];
+  console.log(file);
   const text = document.createElement("p");
   if (file.length === 0) {
     text.textContent = "No file currently selected for upload";
