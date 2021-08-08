@@ -16,6 +16,7 @@ function testing(){
         type: 'POST',
         url: '/upload',
         data: json,
+        contentType: 'application/json',
         success: function (response) {
             if (response === true) {
                 console.log('Lo he logrado');
