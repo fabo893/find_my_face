@@ -25,12 +25,7 @@ def display(dic):
 def upload():
     img = request.get_json()
     print(img)
-    if img['name'] == 'Fabo':
-        return True
-    elif img is None:
-        return False
-    else:
-        return False
+    return True
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)
