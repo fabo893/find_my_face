@@ -5,9 +5,9 @@ $("#btn").click(function () {
 })
 
 let json = {
-    name = 'Fabo',
-    email = 'jose@gmail.com',
-    estado = 'soltero'
+    name: 'Fabo',
+    email: 'jose@gmail.com',
+    estado: 'soltero'
 }
 
 $.ajax({
