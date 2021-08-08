@@ -27,6 +27,8 @@ def upload():
     print(img)
     if img['name'] == 'Fabo':
         return True
+    elif img is None:
+        return False
     else:
         return False
 
