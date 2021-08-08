@@ -14,7 +14,7 @@ files.addEventListener("change", function () {
     previewText.style.display = "none";
     previewImage.style.display = "block";
     reader.addEventListener("load", function () {
-      //console.log(this.result);
+      console.log(this);
       previewImage.setAttribute("src", this.result);
     });
     reader.readAsDataURL(file);
