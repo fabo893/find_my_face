@@ -23,7 +23,12 @@ def display(dic):
 
 @app.route("/upload", methods=['POST'])
 def upload():
-    return 'hola'
+    img = request.get_json()
+    print(img)
+    if img['name'] == 'Fabo':
+        return True
+    else:
+        return False
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)

@@ -1,7 +1,25 @@
 #!/usr/bin/nodejs
 
 $("#btn").click(function () {
-    let img1 = $(".preview_image_one").attr("src");
-    let img2 = $('.preview_image_two').attr('src');
-
+    testing();
 })
+
+let json = {
+    name = 'Fabo',
+    email = 'jose@gmail.com',
+    estado = 'soltero'
+}
+
+$.ajax({
+    type: 'POST',
+    url: '/upload',
+    data: json,
+    success: function (response) {
+        if (response === true) {
+            console.log('Lo he logrado');
+        }
+        else {
+            console.log('No lo logre');
+        }
+    }
+});
