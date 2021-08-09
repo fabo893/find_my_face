@@ -6,19 +6,22 @@ $("#btn").click(function () {
 
 function testing(){
 
-    let json = {
+    let json1 = {
         name: 'Fabo',
         email: 'jose@gmail.com',
         estado: 'soltero'
-    }
+    };
     
-    console.log(json);
-    
+    console.log(json1);
+
+    let json = JSON.stringify(json1);
+
     $.ajax({
         type: 'POST',
         url: '/upload',
-        data: json,
         contentType: 'application/json',
+        data: json,
+        dataType: 'json',
         success: function (response) {
             console.log(response);
         }
