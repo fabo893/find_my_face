@@ -25,7 +25,7 @@ def display(dic):
 def upload():
     img = request.get_json()
     print(img)
-    return True
+    return 'Yes'
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)

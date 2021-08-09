@@ -18,12 +18,7 @@ function testing(){
         data: json,
         contentType: 'application/json',
         success: function (response) {
-            if (response === true) {
-                console.log('Lo he logrado');
-            }
-            else {
-                console.log('No lo logre');
-            }
+            console.log(response);
         }
     });
 }
