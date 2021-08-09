@@ -12,6 +12,8 @@ function testing(){
         estado: 'soltero'
     }
     
+    console.log(json);
+    
     $.ajax({
         type: 'POST',
         url: '/upload',
