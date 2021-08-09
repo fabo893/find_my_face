@@ -1,7 +1,9 @@
 #!/usr/bin/nodejs
 
 $("#btn").click(function () {
-    testing();
+    let imagen = document.getElementById('img_one');
+
+    console.log(imagen);
 })
 
 function testing(){
