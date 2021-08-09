@@ -24,8 +24,15 @@ def display(dic):
 @app.route("/upload", methods=['POST'])
 def upload():
     img = request.get_json()
-    print(img)
-    return jsonify('Lo logre')
+    name = img.get('name')
+    tipo = img.get('type')
+
+    if name is not None and tipo is not None:
+        js = {'name': name, 'type': tipo}
+    else:
+        js = {'name': None, 'type': None}
+
+    return jsonify(js)
     
 
 if __name__ == "__main__":

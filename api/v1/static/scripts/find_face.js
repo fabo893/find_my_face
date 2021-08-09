@@ -5,14 +5,15 @@ $("#btn").click(function () {
     let file = imagen.files[0];
 
     console.log(file);
+
+    testing(file);
 })
 
-function testing(){
+function testing(data){
 
     let json1 = {
-        name: 'Fabo',
-        email: 'jose@gmail.com',
-        estado: 'soltero'
+        name: `${data.name}`,
+        type: `${data.type}`
     };
     
     console.log(json1);
@@ -26,13 +27,6 @@ function testing(){
         data: json,
         success: function (response) {
             console.log(response);
-
-            if (response === 'OK') {
-                alert('Eres crack');
-            }
-            else {
-                alert('Trili')
-            }
         }
     });
 }
