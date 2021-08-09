@@ -23,6 +23,13 @@ function testing(){
         data: json,
         success: function (response) {
             console.log(response);
+
+            if (response === 'OK') {
+                alert('Eres crack');
+            }
+            else {
+                alert('Trili')
+            }
         }
     });
 }

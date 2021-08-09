@@ -25,8 +25,7 @@ def display(dic):
 def upload():
     img = request.get_json()
     print(img)
-    test = {'prueba': 'ok'}
-    return jsonify(test)
+    return jsonify('Lo logre')
     
 
 if __name__ == "__main__":
