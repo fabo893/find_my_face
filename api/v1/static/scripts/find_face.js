@@ -6,15 +6,15 @@ $("#btn").click(function () {
 
 function testing(){
 
-    let json1 = {
+    let json = {
         name: 'Fabo',
         email: 'jose@gmail.com',
         estado: 'soltero'
     };
     
-    console.log(json1);
+    console.log(json);
 
-    let json = JSON.stringify(json1);
+    
 
     $.ajax({
         type: 'POST',
