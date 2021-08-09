@@ -2,8 +2,9 @@
 
 $("#btn").click(function () {
     let imagen = document.getElementById('img_one');
+    let file = imagen.files[0];
 
-    console.log(imagen);
+    console.log(file);
 })
 
 function testing(){
