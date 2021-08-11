@@ -21,7 +21,7 @@ files.addEventListener("change", function () {
 
     let img1 = {
       name: `${file.name}`,
-      res: `${file.result}`
+      res: `${reader.result}`
     };
 
     console.log(img1);

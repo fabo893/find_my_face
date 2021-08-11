@@ -15,6 +15,7 @@ class Known(BaseModel, Base):
     __tablename__ = 'known_img'
     name = Column(String(128), nullable=False)
     image = Column(BLOB)
+    
 
     def __init__(self, *args, **kwargs):
         """initializes known"""
