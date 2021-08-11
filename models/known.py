@@ -6,14 +6,14 @@
 import models
 from models.base_model import BaseModel, Base
 import sqlalchemy
-from sqlalchemy import Column, String, Text
+from sqlalchemy import Column, String, BLOB
 
 
 class Known(BaseModel, Base):
     """ Representation of known picture """
     __tablename__ = 'known_img'
     name = Column(String(128), nullable=False)
-    image = Column(Text, unique=True, nullable=False)
+    image = Column(BLOB, nullable=False)
     type = Column(String(15), nullable=False)
 
 
