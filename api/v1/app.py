@@ -27,7 +27,7 @@ def display(dic):
 def upload():
     img = request.files['image_uploads1']
 
-    print(img)
+    print(img.read())
 
     if not img:
         return 'No img upload', 400
