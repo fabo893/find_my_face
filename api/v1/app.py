@@ -27,15 +27,14 @@ def display(dic):
 def upload():
     img = request.files['image_uploads1']
 
-    print(img.read())
-
     if not img:
         return 'No img upload', 400
 
     name = secure_filename(img.filename)
     type = img.mimetype
+    binary = img.read()
 
-    known = Known(name=name, image=img.read(), type=type)
+    known = Known(name=name, image=binary, type=type)
     known.save()
 
     """
