@@ -1,14 +1,23 @@
 #!/usr/bin/nodejs
 
 $("#btn").click(function () {
-    let imagen = document.getElementById('img_one');
+
+    $.ajax({
+        url: '/upload',
+        success: function(response) {
+            console.log(response);
+        }
+    });
+
+    /* let imagen = document.getElementById('img_one');
     let file = imagen.files[0];
 
     console.log(file);
 
-    testing(file);
+    testing(file); */
 })
 
+/* 
 function testing(data){
 
     let json1 = {
@@ -27,4 +36,4 @@ function testing(data){
             console.log(response);
         }
     });
-}
+} */

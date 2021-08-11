@@ -5,6 +5,8 @@ Api for Find My Face
 
 from os import name
 import json
+
+from werkzeug.utils import secure_filename
 from models import storage
 from models.known import Known
 from models.unknown import Unknown
@@ -23,19 +25,18 @@ def display(dic):
 
 @app.route("/upload", methods=['POST'])
 def upload():
-    img = request.get_json()
-    name = img.get('name')
+    img = request.files['image_upload1']
 
-    with open(str(img.get('image')), 'rb') as image:
-        blob = image.read()
+    print(img)
 
-    tipo = img.get('type')
+    if not img:
+        return 'No img upload', 400
 
-    print(name)
-    print()
-    print(blob)
-    print()
-    print(tipo)
+    name = secure_filename(img.filename)
+    type = img.mimetype
+
+    known = Known(name=name, image=img.read(), type=type)
+    known.save()
 
     """
     if name is not None and tipo is not None:
