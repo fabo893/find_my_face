@@ -34,7 +34,7 @@ def upload():
     type = img.mimetype
     binary = img.read()
 
-    known = Known(name=name, imag='si', type=type)
+    known = Known(name=name, type=type)
     known.save()
 
     """
