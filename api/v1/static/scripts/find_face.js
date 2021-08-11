@@ -1,6 +1,6 @@
 #!/usr/bin/nodejs
 
-$("#btn").click(function () {
+/* $("#btn").click(function () {
 
     $.ajax({
         type: 'POST',
@@ -11,15 +11,15 @@ $("#btn").click(function () {
         }
     });
 
-    /* let imagen = document.getElementById('img_one');
+    let imagen = document.getElementById('img_one');
     let file = imagen.files[0];
 
     console.log(file);
 
-    testing(file); */
+    testing(file);
 })
 
-/* 
+
 function testing(data){
 
     let json1 = {
