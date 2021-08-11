@@ -26,7 +26,7 @@ def upload():
     img = request.get_json()
     name = img.get('name')
 
-    with open(img.get('image'), 'rb') as image:
+    with open(str(img.get('image')), 'rb') as image:
         blob = image.read()
 
     tipo = img.get('type')
