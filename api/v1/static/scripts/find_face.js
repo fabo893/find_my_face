@@ -15,8 +15,6 @@ function testing(data){
         name: `${data.name}`,
         type: `${data.type}`
     };
-    
-    console.log(json1);
 
     let json = JSON.stringify(json1);
 

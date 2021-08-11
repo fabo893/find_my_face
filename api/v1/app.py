@@ -32,6 +32,7 @@ def upload():
     else:
         js = {'name': None, 'type': None}
 
+    print(js)
     return jsonify(js)
     
 
