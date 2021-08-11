@@ -3,7 +3,9 @@
 $("#btn").click(function () {
 
     $.ajax({
+        type: 'POST',
         url: '/upload',
+        contentType: 'text/html',
         success: function(response) {
             console.log(response);
         }
