@@ -25,7 +25,7 @@ def display(dic):
 
 @app.route("/upload", methods=['POST'])
 def upload():
-    img = request.files['image_upload1']
+    img = request.files['image_uploads1']
 
     print(img)
 
