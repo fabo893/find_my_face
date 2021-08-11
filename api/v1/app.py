@@ -46,6 +46,19 @@ def upload():
     print(js)
     """
     return "Let's go", 200
+
+@app.route("/comparar")
+def comparar():
+    objs = request.get_json()
+    print(objs)
+
+    imagen_uno = objs[0]
+    imagen_dos = objs[1]
+
+    print(imagen_uno)
+    print(imagen_dos)
+    
+    return "Ok", 200
     
 
 if __name__ == "__main__":
