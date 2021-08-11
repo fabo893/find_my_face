@@ -18,14 +18,6 @@ files.addEventListener("change", function () {
       previewImage.setAttribute("src", this.result);
     });
     reader.readAsDataURL(file);
-
-    let img1 = {
-      name: `${file.name}`,
-      res: `${reader.result}`
-    };
-
-    console.log(img1);
-
   } else {
     previewText.style.display = null;
     previewImage.style.display = null;

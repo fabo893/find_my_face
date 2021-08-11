@@ -25,15 +25,27 @@ def display(dic):
 def upload():
     img = request.get_json()
     name = img.get('name')
+
+    with open(img.get('image'), 'rb') as image:
+        blob = image.read()
+
     tipo = img.get('type')
 
+    print(name)
+    print()
+    print(blob)
+    print()
+    print(tipo)
+
+    """
     if name is not None and tipo is not None:
         js = {'name': name, 'type': tipo}
     else:
         js = {'name': None, 'type': None}
 
     print(js)
-    return jsonify(js)
+    """
+    return "Let's go", 200
     
 
 if __name__ == "__main__":
