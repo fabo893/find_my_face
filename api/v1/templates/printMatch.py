@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import json
 import face_recognition
 import sys
 

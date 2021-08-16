@@ -12,24 +12,25 @@ $("#btn").click(function () {
     if (file_uno == undefined || file_dos == undefined) {
         alert('Sube las dos imagenes');
     } else {
-        comparar(file_uno, file_dos);
+        comparar(file_uno);
     }
 })
 
 
-function comparar(img_uno, img_dos){
+function comparar(img_uno){
 
-    let json_parse = {img_uno, img_dos};
+    let json_parse = img_uno;
 
     //console.log(json_parse);
 
-    let json = JSON.stringify(json_parse);
+    //let json = JSON.stringify(json_parse);
 
     $.ajax({
         type: 'POST',
-        url: '/comparar',
-        contentType: 'application/json',
-        data: json,
+        url: '/test.py',
+        data: { param: json_parse },
+        contentType: false,
+        processData: false,
         success: function (response) {
             console.log(response);
         }
