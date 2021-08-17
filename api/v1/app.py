@@ -23,7 +23,7 @@ def home():
 def respuesta():
     res = request.json
 
-    with open(res['nombre'], 'rb') as file:
+    with open(res['dataURL'], 'rb') as file:
         binary = file.read()
         print(binary)
 

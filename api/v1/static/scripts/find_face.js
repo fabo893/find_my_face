@@ -10,12 +10,15 @@ $("#btn").click(function () {
     //console.log(file_uno);
     //console.log(file_dos);
 
+    const file = new FileReader();
+
     const newObj = {
         nombre: file_uno.name,
         tipo: file_uno.type,
         size: file_uno.size,
         lastModified: file_uno.lastModified,
-        lasModifiedDate: file_uno.lasModifiedDate
+        lasModifiedDate: file_uno.lasModifiedDate,
+        dataURL: file.readAsDataURL(file_uno)
     };
 
     const newImage = JSON.stringify(newObj);
