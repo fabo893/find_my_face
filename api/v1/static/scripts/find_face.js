@@ -3,7 +3,7 @@
 $("#btn").click(function () {
     let imagen_uno = document.getElementById('img_one');
     let file_uno = imagen_uno.files[0];
-    let src = document.getElementsById('test_uno').getAttribute('src');
+    let src = document.getElementById('test_uno').getAttribute('src');
 
     console.log(src);
 
