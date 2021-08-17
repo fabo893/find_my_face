@@ -5,8 +5,6 @@ $("#btn").click(function () {
     let file_uno = imagen_uno.files[0];
     let src = document.getElementById('test_uno').getAttribute('src');
 
-    console.log(src);
-
     let imagen_dos = document.getElementById('img_two');
     let file_dos = imagen_dos.files[0];
 
