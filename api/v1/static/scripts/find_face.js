@@ -14,7 +14,7 @@ $("#btn").click(function () {
         nombre: file_uno.name,
         tipo: file_uno.type
     };
-    console.log(img_uno);
+    console.log(typeof(img_uno));
 
     const img_dos = {
         nombre: file_dos.name,
