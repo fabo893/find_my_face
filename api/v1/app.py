@@ -19,47 +19,5 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/display/<dic>")
-def display(dic):
-    return render_template("test.html", dic=dic)
-
-@app.route("/upload", methods=['POST'])
-def upload():
-    img = request.files['image_uploads1']
-
-    if not img:
-        return 'No img upload', 400
-
-    name = secure_filename(img.filename)
-    type = img.mimetype
-    binary = img.read()
-
-    known = Known(name=name, test='test')
-    known.save()
-
-    """
-    if name is not None and tipo is not None:
-        js = {'name': name, 'type': tipo}
-    else:
-        js = {'name': None, 'type': None}
-
-    print(js)
-    """
-    return "Let's go", 200
-
-@app.route("/comparar")
-def comparar():
-    objs = request.get_json()
-    print(objs)
-
-    imagen_uno = objs[0]
-    imagen_dos = objs[1]
-
-    print(imagen_uno)
-    print(imagen_dos)
-    
-    return "Ok", 200
-    
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)

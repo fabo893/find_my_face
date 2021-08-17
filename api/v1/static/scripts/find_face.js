@@ -8,31 +8,5 @@ $("#btn").click(function () {
     let file_dos = imagen_dos.files[0];
 
     console.log(file_uno);
-
-    if (file_uno == undefined || file_dos == undefined) {
-        alert('Sube las dos imagenes');
-    } else {
-        comparar(file_uno);
-    }
+    console.log(file_dos);
 })
-
-
-function comparar(img_uno){
-
-    let json_parse = img_uno;
-
-    //console.log(json_parse);
-
-    //let json = JSON.stringify(json_parse);
-
-    $.ajax({
-        type: 'POST',
-        url: 'comparar',
-        data: json_parse,
-        contentType: false,
-        processData: false,
-        success: function (response) {
-            console.log(response);
-        }
-    });
-}
