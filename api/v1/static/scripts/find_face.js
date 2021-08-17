@@ -7,7 +7,7 @@ $("#btn").click(function () {
     let imagen_dos = document.getElementById('img_two');
     let file_dos = imagen_dos.files[0];
 
-    //console.log(file_uno);
+    console.log(file_uno);
 
     if (file_uno == undefined || file_dos == undefined) {
         alert('Sube las dos imagenes');
@@ -27,8 +27,8 @@ function comparar(img_uno){
 
     $.ajax({
         type: 'POST',
-        url: '/test.py',
-        data: { param: json_parse },
+        url: 'comparar',
+        data: json_parse,
         contentType: false,
         processData: false,
         success: function (response) {
