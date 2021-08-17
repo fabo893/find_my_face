@@ -7,7 +7,7 @@ $("#btn").click(function () {
     let imagen_dos = document.getElementById('img_two');
     let file_dos = imagen_dos.files[0];
 
-    console.log(file_uno.type);
+    console.log(typeof(file_uno));
     console.log(file_dos.name);
 
     const img_uno = {
