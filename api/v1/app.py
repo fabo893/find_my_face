@@ -19,5 +19,10 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/respuesta", methods=['POST'])
+def respuesta():
+    res = request.get_json(force=True)
+    return jsonify(res)
+    
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)
