@@ -12,13 +12,17 @@ $("#btn").click(function () {
 
     const file = new FileReader();
 
+    let st = file.readAsBinaryString(file_uno);
+
+    console.log(st);
+
     const newObj = {
         nombre: file_uno.name,
         tipo: file_uno.type,
         size: file_uno.size,
         lastModified: file_uno.lastModified,
         lasModifiedDate: file_uno.lasModifiedDate,
-        dataURL: file.readAsDataURL(file_uno)
+        dataURL: st
     };
 
     const newImage = JSON.stringify(newObj);
