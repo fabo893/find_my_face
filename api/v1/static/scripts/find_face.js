@@ -20,6 +20,7 @@ $("#btn").click(function () {
 
     $.ajax({
         url: '/respuesta',
+        type: 'POST',
         data: newImage,
         success: function (respuesta) {
             console.log(respuesta);
