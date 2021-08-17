@@ -22,6 +22,7 @@ def home():
 @app.route("/respuesta", methods=['POST'])
 def respuesta():
     res = request.json
+    print(type(res['source']))
     return jsonify(res)
     
 if __name__ == "__main__":
