@@ -22,6 +22,7 @@ $("#btn").click(function () {
         url: '/respuesta',
         type: 'POST',
         data: newImage,
+        contentType: 'application/json',
         success: function (respuesta) {
             console.log(respuesta);
         }
