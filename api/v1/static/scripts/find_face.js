@@ -12,11 +12,11 @@ $("#btn").click(function () {
 
     const file = new FileReader();
 
-    /* file.addEventListener("load", function () {
-        let st = this.result;
-    }); */
+    file.addEventListener("load", function () {
+        console.log(this.result);
+    });
 
-    console.log(file.result);
+    //console.log(file.result);
 
     const newObj = {
         nombre: file_uno.name,
