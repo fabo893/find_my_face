@@ -23,8 +23,11 @@ def home():
 def respuesta():
     res = request.json
 
+    with open(res['nombre'], 'rb') as file:
+        binary = file.read()
+        print(binary)
 
-    print(res['nombre'])
+    '''print(res['nombre'])'''
     return jsonify(res)
     
 if __name__ == "__main__":
