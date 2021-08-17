@@ -22,13 +22,6 @@ def home():
 @app.route("/respuesta", methods=['POST'])
 def respuesta():
     res = request.json
-
-
-    with open(res['source'], 'rb') as file:
-        binary = file.read()
-        print(binary)
-
-    '''print(res['nombre'])'''
     return jsonify(res)
     
 if __name__ == "__main__":
