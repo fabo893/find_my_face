@@ -15,7 +15,7 @@ files.addEventListener("change", function () {
       console.log(this);
       previewImage.setAttribute("src", this.result);
     });
-    console.log(reader.readAsDataURL(file));
+    reader.readAsDataURL(file);
   } else {
     previewText.style.display = null;
     previewImage.style.display = null;

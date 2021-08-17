@@ -12,7 +12,9 @@ $("#btn").click(function () {
 
     const file = new FileReader();
 
-    let st = file.readAsBinaryString(file_uno);
+    file.addEventListener("load", function () {
+        st = this.result;
+    });
 
     console.log(st);
 
