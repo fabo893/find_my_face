@@ -3,6 +3,9 @@
 $("#btn").click(function () {
     let imagen_uno = document.getElementById('img_one');
     let file_uno = imagen_uno.files[0];
+    let src = document.getElementsByClassName('.preview_image_one').src;
+
+    console.log(src);
 
     let imagen_dos = document.getElementById('img_two');
     let file_dos = imagen_dos.files[0];
@@ -10,13 +13,7 @@ $("#btn").click(function () {
     //console.log(file_uno);
     //console.log(file_dos);
 
-    const file = new FileReader();
 
-    file.addEventListener("load", function () {
-        console.log(this.result);
-    });
-
-    //console.log(file.result);
 
     const newObj = {
         nombre: file_uno.name,
