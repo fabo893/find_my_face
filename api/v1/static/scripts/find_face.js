@@ -9,4 +9,16 @@ $("#btn").click(function () {
 
     console.log(file_uno.type);
     console.log(file_dos.name);
+
+    const img_uno = {
+        nombre: file_uno.name,
+        tipo: file_uno.type
+    };
+    console.log(img_uno);
+
+    const img_dos = {
+        nombre: file_dos.name,
+        tipo: file_dos.type
+    };
+    console.log(img_dos);
 })
