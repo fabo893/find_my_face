@@ -10,13 +10,15 @@ $("#btn").click(function () {
     //console.log(file_uno);
     //console.log(file_dos);
 
-    const newImage = {
+    const newObj = {
         nombre: file_uno.name,
         tipo: file_uno.type,
         size: file_uno.size,
         lastModified: file_uno.lastModified,
         lasModifiedDate: file_uno.lasModifiedDate
     };
+
+    const newImage = JSON.stringify(newObj);
 
     $.ajax({
         url: '/respuesta',
