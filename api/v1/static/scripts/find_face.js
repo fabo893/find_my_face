@@ -21,8 +21,7 @@ $("#btn").click(function () {
         tipo: file_uno.type,
         size: file_uno.size,
         lastModified: file_uno.lastModified,
-        lasModifiedDate: file_uno.lasModifiedDate,
-        dataURL: st
+        lasModifiedDate: file_uno.lasModifiedDate
     };
 
     const newImage = JSON.stringify(newObj);
