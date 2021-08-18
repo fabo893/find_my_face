@@ -23,6 +23,8 @@ $("#btn").click(function () {
         source: srcSub
     };
 
+    console.log(newObj.nombre);
+
     const newImage = JSON.stringify(newObj);
 
     $.ajax({

@@ -23,7 +23,7 @@ def home():
 @app.route("/respuesta", methods=['POST'])
 def respuesta():
     res = request.json
-
+    print(res['nombre'])
     base64_img_bytes = res['source'].encode('utf-8')
     with open('api/v1/static/images/known/test.png', 'wb') as file_to_save:
         decoded_image_data = base64.decodebytes(base64_img_bytes)
