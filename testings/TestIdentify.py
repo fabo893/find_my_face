@@ -51,7 +51,7 @@ def identify(known_img, known_name, unknown_img):
   del draw
 
   # Display image
-  pil_image.show()
+  # pil_image.show()
 
   # Save image
   pil_image.save('Image_testing.jpg')
