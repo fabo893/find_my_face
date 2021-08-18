@@ -10,6 +10,7 @@ from werkzeug.utils import secure_filename
 from models import storage
 from models.known import Known
 from models.unknown import Unknown
+from testings.test import testMethod
 from flask import Flask, render_template, redirect, request, url_for, jsonify
 
 
@@ -27,6 +28,8 @@ def respuesta():
     with open('api/v1/static/images/known/test.png', 'wb') as file_to_save:
         decoded_image_data = base64.decodebytes(base64_img_bytes)
         file_to_save.write(decoded_image_data)
+
+        testMethod('api/v1/static/images/known/test.png', 'api/v1/static/images/known/test.png')
 
     return jsonify(res)
     
