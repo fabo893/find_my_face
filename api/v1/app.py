@@ -11,6 +11,7 @@ from models import storage
 from models.known import Known
 from models.unknown import Unknown
 from testings.test import testMethod
+from testings.TestIdentify import identify
 from flask import Flask, render_template, redirect, request, url_for, jsonify
 
 
@@ -23,13 +24,16 @@ def home():
 @app.route("/respuesta", methods=['POST'])
 def respuesta():
     res = request.json
-    print(res['nombre'])
+
+    image_one = 'api/v1/static/images/known/{}'.format(res['nombre'])
+    image_two = 'api/v1/static/images/known/{}'.format(res['nombre'])
+
     base64_img_bytes = res['source'].encode('utf-8')
-    with open('api/v1/static/images/known/test.png', 'wb') as file_to_save:
+    with open(image_one, 'wb') as file_to_save:
         decoded_image_data = base64.decodebytes(base64_img_bytes)
         file_to_save.write(decoded_image_data)
 
-        testMethod('api/v1/static/images/known/test.png', 'api/v1/static/images/known/test.png')
+        identify(image_one, "Fabian", image_two)
 
     return jsonify(res)
     

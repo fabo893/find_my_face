@@ -53,6 +53,5 @@ def identify(known_img, known_name, unknown_img):
   # Display image
   pil_image.show()
 
-  name_known = known_name + '.jpg'
   # Save image
-  pil_image.save(name_known)
+  pil_image.save('Image_testing.jpg')
