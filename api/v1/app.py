@@ -24,10 +24,10 @@ def respuesta():
     res = request.json
 
     base64_img_bytes = res['source'].encode('utf-8')
-    with open('test.png', 'wb') as file_to_save:
+    with open('test.jpg', 'wb') as file_to_save:
         decoded_image_data = base64.decodebytes(base64_img_bytes)
         file_to_save.write(decoded_image_data)
-        
+
     return jsonify(res)
     
 if __name__ == "__main__":
