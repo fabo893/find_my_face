@@ -25,17 +25,22 @@ def home():
 def respuesta():
     res = request.json
 
-    image_one = 'api/v1/static/images/known/{}'.format(res['nombre'])
-    image_two = 'api/v1/static/images/known/{}'.format(res['nombre'])
+    image_one = 'api/v1/static/images/known/{}'.format(res['nombre_uno'])
+    image_two = 'api/v1/static/images/unknown/{}'.format(res['nombre_dos'])
 
-    base64_img_bytes = res['source'].encode('utf-8')
-    with open(image_one, 'wb') as file_to_save:
-        decoded_image_data = base64.decodebytes(base64_img_bytes)
-        file_to_save.write(decoded_image_data)
+    base64_imgOne_bytes = res['source_uno'].encode('utf-8')
+    with open(image_one, 'wb') as fileOne_to_save:
+        decoded_imageOne_data = base64.decodebytes(base64_imgOne_bytes)
+        fileOne_to_save.write(decoded_imageOne_data)
 
-        identify(image_one, "Fabian", image_two)
+    base64_imgTwo_bytes = res['source_dos'].encode('utf-8')
+    with open(image_two, 'wb') as fileTwo_to_save:
+        decoded_imageTwo_data = base64.decodebytes(base64_imgTwo_bytes)
+        fileTwo_to_save.write(decoded_imageTwo_data)
 
-    return jsonify(res)
+    identify(image_one, res['name_uno'], image_two)
+
+    return jsonify("Logradooooooooooooooooooooooo")
     
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)
