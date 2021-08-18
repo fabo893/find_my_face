@@ -1,19 +1,16 @@
 #!/usr/bin/python3
 import face_recognition
 
-known = face_recognition.load_image_file("images/known/obama.jpg")
-unknown = face_recognition.load_image_file("images/unknown/obama_test.jpg")
+def testMethod(img_one, img_two):
+  known = face_recognition.load_image_file(img_one)
+  unknown = face_recognition.load_image_file(img_two)
 
-encoding_known = face_recognition.face_encodings(known)[0]
-encoding_unknown = face_recognition.face_encodings(unknown)
+  encoding_known = face_recognition.face_encodings(known)[0]
+  encoding_unknown = face_recognition.face_encodings(unknown)[0]
 
-face_locations = face_recognition.face_locations(unknown)
+  results = face_recognition.compare_faces([encoding_known], encoding_unknown)
 
-print(encoding_unknown)
-
-for face in encoding_unknown:
-  result = face_recognition.compare_faces(face, encoding_known)
-  if result == True:
+  if results[0]:
     print("FOUNDED")
   else:
     print("NOT FOUND")
