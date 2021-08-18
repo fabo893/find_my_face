@@ -38,7 +38,14 @@ def respuesta():
         decoded_imageTwo_data = base64.decodebytes(base64_imgTwo_bytes)
         fileTwo_to_save.write(decoded_imageTwo_data)
 
+    known_pic = Known(name=res['name_uno'], image=image_one)
+    known_pic.save()
+
+    unknown_pic = Unknown(name=res['name_dos'], image=image_two)
+    unknown_pic.save()
+
     identify(image_one, res['name_uno'], image_two)
+
 
     return jsonify("Logradooooooooooooooooooooooo")
     
