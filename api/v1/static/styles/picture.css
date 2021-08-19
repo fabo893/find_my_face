@@ -1,6 +1,6 @@
 .img_div {
     width: 1000px;
-    height: 750px;
+    /* height: 750px; */
     position: relative;
     top: 50%;
     left: 50%;
@@ -39,7 +39,7 @@
 #response {
     width: 1000px;
     height: 800px;
-    /* border: 2px solid black; */
+    border: 2px solid black;
     margin-top: 70px;
     margin-left: 20px;
     position: relative;
