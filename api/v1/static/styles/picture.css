@@ -30,23 +30,21 @@
     color: #cccccc;
 }
 
-.preview_image_one, .preview_image_two {
+.preview_image_one, .preview_image_two, .resp_image {
     display: none;
     max-width: 100%;
     max-height: 100%;
 }
 
 #response {
-    margin: 0 auto;
     width: 1000px;
-    height: 8000px;
+    height: 800px;
     border: 2px solid black;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
-
-
 
 form {
     margin-top: 10px;
