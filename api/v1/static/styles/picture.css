@@ -36,6 +36,12 @@
     max-height: 100%;
 }
 
+#response {
+    margin: 0 auto;
+    width: 500px;
+    height: 450px;
+}
+
 form {
     margin-top: 10px;
     background: #ccc;

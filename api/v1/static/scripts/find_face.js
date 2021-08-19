@@ -56,7 +56,7 @@ $("#btn").click(function () {
             console.log(respuesta);
 
             let respImage = document.getElementById('response');
-            respImage.innerHTML = "<img src=data:image/jpg;base64," + respuesta + " max-width=\"100%\" height=\"100%\">"
+            respImage.innerHTML = "<img src=data:image/jpg;base64," + respuesta + " id=\"response_image\" max-width=\"100%\" height=\"100%\">"
         }
     });
 
