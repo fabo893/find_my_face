@@ -40,7 +40,7 @@ def respuesta():
 
     identify(image_one, res['name_uno'], image_two)
 
-    identified_image = 'api/v1/static/image/identified/Image_testing.jpg'
+    identified_image = 'api/v1/static/images/identified/Image_testing.jpg'
 
     with open(identified_image, 'rb') as binary_file:
         binary_file_data = binary_file.read()
