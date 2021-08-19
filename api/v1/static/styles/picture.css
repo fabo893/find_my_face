@@ -38,12 +38,15 @@
 
 #response {
     margin: 0 auto;
-    width: 500px;
-    height: 450px;
+    width: 1000px;
+    height: 8000px;
     border: 2px solid black;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
+
 
 form {
     margin-top: 10px;
