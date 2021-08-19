@@ -38,20 +38,16 @@ def respuesta():
         decoded_imageTwo_data = base64.decodebytes(base64_imgTwo_bytes)
         fileTwo_to_save.write(decoded_imageTwo_data)
 
-    with open(image_one, 'rb') as f1:
-        binary = f1.read()
-        known_pic = Known(name=res['name_uno'], image=binary)
-        known_pic.save()
-
-    with open(image_two, 'rb') as f2:
-        binary2 = f2.read()
-        unknown_pic = Unknown(name=res['name_dos'], image=binary2)
-        unknown_pic.save()
-
     identify(image_one, res['name_uno'], image_two)
 
+    identified_image = 'api/v1/static/image/identified/Image_testing.jpg'
 
-    return jsonify("Logradooooooooooooooooooooooo")
+    with open(identified_image, 'rb') as binary_file:
+        binary_file_data = binary_file.read()
+        base64_encoded_data = base64.b64encode(binary_file_data)
+        base64_message = base64_encoded_data.decode('utf-8')
+
+    return jsonify(base64_message)
     
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)

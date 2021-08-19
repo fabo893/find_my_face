@@ -54,4 +54,4 @@ def identify(known_img, known_name, unknown_img):
   # pil_image.show()
 
   # Save image
-  pil_image.save('Image_testing.jpg')
+  pil_image.save('api/v1/static/images/identified/Image_testing.jpg')
