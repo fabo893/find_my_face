@@ -54,6 +54,9 @@ $("#btn").click(function () {
         contentType: 'application/json',
         success: function (respuesta) {
             console.log(respuesta);
+
+            let respImage = document.getElementById('response');
+            respImage.innerHTML("<img src=" + respuesta + " width=\"450px\" height=\"400px\">")
         }
     });
 });
