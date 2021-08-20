@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif, Arial, Helvetica;
-  background-color: rgb(163, 149, 149);
+/*   background-color: rgb(163, 149, 149); */
+  background-image: radial-gradient(rgb(233, 184, 184), rgb(0,0,0,));
 }
 
 .container {
