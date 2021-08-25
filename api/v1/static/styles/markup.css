@@ -1,6 +1,10 @@
 html, body {
     margin: 0px;
     padding: 0px;
+    /* height: 100%; */
+}
+
+body {
     height: 100%;
 }
 
@@ -92,7 +96,7 @@ nav ul {
 #sub_cont {
     width: 1300px;
     height: 600px;
-    border: 1px solid black;
+   /*  border: 1px solid black; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -102,13 +106,30 @@ nav ul {
 /*     position: absolute; */
     width: 600px;
     height: 600px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+#sub_text h2 {
+    margin: 0;
+    margin-top: 30%;
+    color: white;
+    font-size: 70px;  
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    /* font-family: "Lucida Console", "Courier New", monospace; */
+    text-align: center;
+}
+
+#sub_text h4 {
+    color: white;
+    margin: 0;
+    text-align: center;
 }
 
 #sub_img {
     width: 600px;
     height: 600px;
-    border: 1px solid black; 
+   /*  border: 1px solid black;  */
 }
 
 #sub_img img {
@@ -164,7 +185,7 @@ h1 {
     height: 250px;
 }
 
-h2 {
+.team_div h2 {
     font-family: "Gill Sans", sans-serif;
     font-weight: normal;
 }
