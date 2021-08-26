@@ -36,7 +36,6 @@ $("#btn").click(function () {
         let srcSub_dos = src_dos.split(',')[1];
     
     
-    
         /* OBJETO DE IMAGENES */
     
         // Creando un objeto con las imagenes para enviarlas a flask server
@@ -64,8 +63,8 @@ $("#btn").click(function () {
             success: function (respuesta) {
                 console.log(respuesta);
     
-                let respImage = document.getElementsByClassName('response_class');
-                respImage.setAttribute("id", "response");
+                $('.response_class').attr('id', 'response');
+                let respImage = document.getElementsById('response');
                 respImage.innerHTML = "<img src=data:image/jpg;base64," + respuesta + " class=\"resp_image\" id=\"response_image\">"
             }
         });
