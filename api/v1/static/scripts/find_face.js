@@ -64,7 +64,7 @@ $("#btn").click(function () {
                 console.log(respuesta);
     
                 $('.response_class').attr('id', 'response');
-                let respImage = document.getElementsById('response');
+                let respImage = document.getElementById('response');
                 respImage.innerHTML = "<img src=data:image/jpg;base64," + respuesta + " class=\"resp_image\" id=\"response_image\">"
             }
         });
