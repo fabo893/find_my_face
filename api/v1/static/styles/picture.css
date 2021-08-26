@@ -75,7 +75,7 @@ input {
     width: 0;
 }
 
-p {
+.preview {
     background: #eee;
     display: flex;
     justify-content: space-between;
