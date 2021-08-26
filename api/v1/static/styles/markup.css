@@ -10,7 +10,7 @@ body {
 
 .container {
     /* background-color: rgba(240, 243, 232, 0.6); */
-    background-image: radial-gradient(rgb(178, 178, 180), rgb(74, 65, 155));
+    background-image: radial-gradient(rgb(178, 178, 180), #425067);
     position: relative;
 }
 
