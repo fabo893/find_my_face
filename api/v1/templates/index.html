@@ -44,75 +44,93 @@
               </div>
             </div>
 
+            <div class="divisors"></div>
+
             <div id="abt_container">
               <h1>About</h1>
               <div id="abt_div">
+                <p id="abt_info">
+                  Find My Face is a Portfolio Project for Holberton School developed by Jose Fabian Rosa, Jeffrey Martinez and Jared Beguellin. It was created thanks to the initiative of Jared Beguellin, in order to use the Python library "face_recognition" to implement methods where you can make a facial recognition of a person in a group image.  We made a graphical user interface, where the user on one side must upload the image of the desired person and on the other side the group image where they want to find the person from the first image. To achieve the desired result we use several languages and technologies: Python (Backend), HTML / CSS and JavaScript (Frontend) and Apache2 (Server). For future ideas, we want to implement that the user can upload a file with up to 10 group images to find the desired face.
+                </p>
+              </div>
+            </div>
+
+            <div class="divisors"></div>
+
+            <div id="how_to">
+
+            </div>
+
+            <div class="divisors"></div>
+            
+            <div id="img_div_container">
+              <div class="img_div">
+                  <div class="img-container">
+                      <div class="img-preview" id="img_one_preview">
+                          <img src="" alt="Image Preview" class="preview_image_one" id="imagen_uno"/>
+                          <span class="preview_text_one">Image Preview</span>
+                      </div>
+  
+                      <form enctype="multipart/form-data">
+                          <div class="files">
+                            <label for="img_one">
+                              Choose image to upload (PNG or JPG)
+                            </label>
+                
+                            <input
+                              type="file"
+                              id="img_one"
+                              accept=".jpg, .png"
+                              name="image_uploads1"
+                            />
+                          </div>
+                          <!--
+                          <div class="preview">
+                            <p>No files currently selected for upload</p>
+                          </div>
+                        -->
+                      </form>
+                  </div>
+  
+                  <div class="img-container">
+                      <div class="img-preview" id="img_two_preview">
+                          <img src="" alt="Image Preview" class="preview_image_two" id="imagen_dos"/>
+                          <span class="preview_text_two">Image Preview</span>
+                      </div>
+  
+                      <form enctype="multipart/form-data">
+                          <div class="files">
+                            <label for="img_two">
+                              Choose image to upload (PNG or JPG)
+                            </label>
+                
+                            <input
+                              type="file"
+                              id="img_two"
+                              accept=".jpg, .png"
+                              name="image_uploads2"
+                            />
+                          </div>
+                          <!--
+                          <div class="preview2">
+                            <p>No files currently selected for upload</p>
+                          </div>
+                        -->
+                      </form>
+                  </div>
+              </div>
+
+              <div class="btn-search">
+                <button id="btn">Find</button>
               </div>
             </div>
             
-            <div class="img_div" id="how_to">
-                <div class="img-container">
-                    <div class="img-preview" id="img_one_preview">
-                        <img src="" alt="Image Preview" class="preview_image_one" id="imagen_uno"/>
-                        <span class="preview_text_one">Image Preview</span>
-                    </div>
-
-                    <form enctype="multipart/form-data">
-                        <div class="files">
-                          <label for="img_one">
-                            Choose image to upload (PNG or JPG)
-                          </label>
-              
-                          <input
-                            type="file"
-                            id="img_one"
-                            accept=".jpg, .png"
-                            name="image_uploads1"
-                          />
-                        </div>
-                        <!--
-                        <div class="preview">
-                          <p>No files currently selected for upload</p>
-                        </div>
-                      -->
-                    </form>
-                </div>
-
-                <div class="img-container">
-                    <div class="img-preview" id="img_two_preview">
-                        <img src="" alt="Image Preview" class="preview_image_two" id="imagen_dos"/>
-                        <span class="preview_text_two">Image Preview</span>
-                    </div>
-
-                    <form enctype="multipart/form-data">
-                        <div class="files">
-                          <label for="img_two">
-                            Choose image to upload (PNG or JPG)
-                          </label>
-              
-                          <input
-                            type="file"
-                            id="img_two"
-                            accept=".jpg, .png"
-                            name="image_uploads2"
-                          />
-                        </div>
-                        <!--
-                        <div class="preview2">
-                          <p>No files currently selected for upload</p>
-                        </div>
-                      -->
-                    </form>
-                </div>
-            </div>
-
-            <div class="btn-search">
-              <button id="btn">Find</button>
-            </div>
 
             <div class= "response_class">
 
             </div>
+
+            <div class="divisors"></div>
 
             <div id="team_info">
               <div class="team_div">
@@ -123,6 +141,9 @@
                   Band Leader, 5 Cats Steel Band
                   <br>
                   Holberton Student - C13
+                  <br>
+                  <br>
+                  https://github.com/fabo893
                 </p>
               </div>
 
@@ -136,6 +157,9 @@
                   Sports and Yoga
                   <br>
                   Holberton Student - C13
+                  <br>
+                  <br>
+                  https://github.com/Jeff-28
                 </p>
               </div>
 
@@ -149,6 +173,9 @@
                   Software Engineer In-Training, Genesis Bitcoin ATM
                   <br>
                   Holberton Student - C13
+                  <br>
+                  <br>
+                  https://github.com/GorillaFu
                 </p>
               </div>
             </div>
