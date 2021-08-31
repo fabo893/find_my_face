@@ -66,6 +66,7 @@ $("#btn").click(function () {
                 $('.response_class').attr('id', 'response');
                 let respImage = document.getElementById('response');
                 respImage.innerHTML = "<img src=data:image/jpg;base64," + respuesta + " class=\"resp_image\" id=\"response_image\">"
+                respImage.scrollIntoView();
             }
         });
     }
