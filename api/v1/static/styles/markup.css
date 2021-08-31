@@ -154,7 +154,7 @@ nav ul {
     flex-direction: column;
 /*     justify-content: center; */
     align-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 h1 {
@@ -186,7 +186,7 @@ h1 {
 #how_to {
     height: 920px;
     margin: 0;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .btn-search {
@@ -218,7 +218,7 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
     /*background-color: rgba(240, 243, 232, 0.6);*/
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .team_div {
