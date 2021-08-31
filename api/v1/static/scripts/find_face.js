@@ -66,7 +66,7 @@ $("#btn").click(function () {
                 $('.response_class').attr('id', 'response');
                 let respImage = document.getElementById('response');
                 respImage.innerHTML = "<img src=data:image/jpg;base64," + respuesta + " class=\"resp_image\" id=\"response_image\">"
-                $("response").animate({scrollTop: $("#btn").scrollTop()}, 1000);
+                $("img_div_container").scrollTo(respImage, 1000);
             }
         });
     }
